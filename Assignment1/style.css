@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+@media(min-width: 961px){  
+    img{
+        float: left;
+        width: 160px;
+        height: auto;
+    }
+}
+@media(min-width: 481px) and (max-width: 960px){
+    img{
+        float: left;
+        width: 320px;
+        height: auto;
+    }
+}
+@media(max-width:480px){
+    img{
+        float: left;
+        width: 480px;
+        height: auto; 
+    }
+}
+.icon:hover{
+    background-color: yellow;
+}
+
+
+
+
+
