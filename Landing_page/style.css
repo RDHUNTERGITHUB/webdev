@@ -4,39 +4,37 @@
 }
 
 
-body{
-    display: flex;
-    flex-direction: column;
-    
+.grid-container{
+    display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+#h2{
+    color: brown;
+}
+img{
+    object-fit: cover;
+  width: 100%;
+  
+}
+img:hover{
+    opacity: 0.5;
+    background-color: aqua;
 }
 
 
-@media(min-width: 961px){  
-    img{
-        float: left;
-        width: 160px;
-        height: auto;
+@media screen and (max-width: 800px){
+    .grid-container{
+        grid-template-columns: auto ;
     }
-}
-@media(min-width: 481px) and (max-width: 960px){
-    img{
-        float: left;
-        width: 320px;
-        height: auto;
-    }
-}
-@media(max-width:480px){
-    img{
-        float: left;
-        width: 480px;
-        height: auto; 
-    }
-}
-.icon:hover{
-    background-color: yellow;
-}
+}  
 
-
+@media screen and (max-width: 600px)
+{
+ .grid-container{
+grid-template-columns: auto;
+  }
+ 
+}
 
 
 
