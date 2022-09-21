@@ -38,10 +38,10 @@
 <body>
     <h1>Custom Video Player</h1>
     <div id="video container">
-        <video id="video" width="960" height="720">
-            <source src="../videos/video.webm" type=video/webm> 
-            <source src="../videos/video.ogg" type=video/ogg> 
-            <source src="../videos/video.mp4"  type=video/mp4> 
+        <video id="video" width="960" height="720" >
+            <source src="videos/video.webm" type=video/webm> 
+            <source src="videos/video.ogg" type=video/ogg> 
+            <source src="videos/video.mp4"  type=video/mp4> 
         </video>
         <div id="video-controls">
 			<button type="button" id="play-pause" class="play">Play</button>
@@ -117,6 +117,15 @@ volumeBar.addEventListener("change", function(){
 		video.currentTime = time;
 
 	});
+
+    //user can also change the video time by click
+    seekBar.addEventListener("click", function(){
+    // Calculate the time
+    var time = video.duration * (seekBar.value / 100);
+		// Update the video's time
+		video.currentTime = time;
+
+	});
 	// Update the seek bar as the video plays
 	video.addEventListener("timeupdate", function() {
 		// Calculate the slider value
@@ -128,6 +137,12 @@ volumeBar.addEventListener("change", function(){
     // Pause the video when the seek handle is being dragged
 	seekBar.addEventListener("mousedown", function() {
 		video.pause();
+	});
+    //pause the video every time time changed
+    seekBar.addEventListener("click", function() {
+		video.pause();
+        playButton.innerHTML = "Play";
+        
 	});
 
 	// Play the video when the seek handle is dropped
