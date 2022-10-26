@@ -1,16 +1,22 @@
-const data = null;
+document.getElementById("tag").addEventListener("submit", function (e) {
+  var word = document.getElementById("userInput").value
 
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+  var query = "https://free-to-play-games-database.p.rapidapi.com/api/games?category=" + word
 
-xhr.addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
-	}
-});
+  const xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
 
-xhr.open("GET", "https://free-to-play-games-database.p.rapidapi.com/api/games?category=shooter");
-xhr.setRequestHeader("X-RapidAPI-Key", "a881374ca7mshde7a19e80e86fdfp1b7ec7jsnb2cce2eff87d");
-xhr.setRequestHeader("X-RapidAPI-Host", "free-to-play-games-database.p.rapidapi.com");
+  xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+      console.log(this.responseText);
+    }
+  });
 
-xhr.send(data);
+  xhr.open("GET", query, true);
+  xhr.setRequestHeader("X-RapidAPI-Key", "a881374ca7mshde7a19e80e86fdfp1b7ec7jsnb2cce2eff87d");
+  xhr.setRequestHeader("X-RapidAPI-Host", "free-to-play-games-database.p.rapidapi.com");
+  xhr.send();
+
+  e.preventDefault()
+
+})
