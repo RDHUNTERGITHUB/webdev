@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(164, 243, 243);
+}
+
+img{
+    scale: 25%;
+    display: block;
+    margin: auto;
+    margin-top: -220px ;
+    margin-bottom: -220px;
+    animation-name: animation;
+    animation-duration: 5s;
+}
+
+@keyframes animation{
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+#text{
+    text-align: center;
+    margin:auto;
+}
+.container{
+    text-align: center;
+  }
+.active{
+    overflow: hidden;
+    color: green;
+    justify-content: ce;
+  }
+  .inactive{
+    overflow: hidden;
+    color:brown;
+  }
+  .output{
+    padding: 60px;
+  }
+  li{
+    border:1px solid black;
+    font-size: 50px;
+  }

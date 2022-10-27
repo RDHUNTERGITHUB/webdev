@@ -9,20 +9,26 @@
 </head>
 <body>
     <div id="container">
+        <nav>
+            <ul class="nav_links">  
+                <li><a href="sort.html">Sorted</a></li>
+                <li><a href="detailed.html">detailed</a></li>
+            </ul>
+        </nav>
         <h1 class="text">Welcome to FindMyGame Site</h1>
         <h2 class="text">Start by choosing a genre:</h2>
         <form id ="tag">
             <input id="userInput"type="text" placeholder="Genre Name?" >
-            <button type="submit">submit</button>
+                <button type="submit">submit</button>
         </form>
-       
-        <div id="title"></div>
-        <div class="slide-up">
-            <div class="inner">
-                <img src="controller.png" alt="controller" class="image">
-            </div>
+        <div id="wrapper" >
+            <div class="output"></div>
+                <div class="slide-up">
+                    <div class="inner">
+                        <img src="controller.png" alt="controller" class="image">
+                    </div>
+                </div>
         </div>
-       
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
